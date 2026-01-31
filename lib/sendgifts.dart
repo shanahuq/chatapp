@@ -31,7 +31,7 @@ class _SendgiftsState extends State<Sendgifts> {
                 Padding(
                   padding: const EdgeInsets.only(left: 160),
                   child: Text(
-                    'Stsoressss',
+                    'Store',
                     style: TextStyle(
                       fontWeight: FontWeight.w500,
                       fontSize: 24,
