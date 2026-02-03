@@ -8,6 +8,142 @@ class Sendgifts extends StatefulWidget {
 }
 
 class _SendgiftsState extends State<Sendgifts> {
+  final List<Map<String, dynamic>> items = [
+    {
+      'image': 'assets/istockphoto-1314193409-612x612-removebg-preview 1.png',
+      'amount': 150,
+      'title': 'standard',
+      'price': '\$4.33',
+    },
+    {
+      'image': 'assets/istockphoto-1314193409-612x612-removebg-preview 2.png',
+      'amount': 650,
+      'title': '15% off',
+      'price': '\$3333',
+    },
+    {
+      'image': 'assets/istockphoto-1314193409-612x612-removebg-preview 3.png',
+      'amount': 1050,
+      'title': '20% off',
+      'price': '\$2222',
+    },
+    {
+      'image': 'assets/istockphoto-1314193409-612x612-removebg-preview 4.png',
+      'amount': 3333,
+      'title': '40% off',
+      'price': '\$5555',
+    },
+    {
+      'image': 'assets/istockphoto-1314193409-612x612-removebg-preview 5.png',
+      'amount': 555,
+      'title': '40% off',
+      'price': '\$6666',
+    },
+    {
+      'image': 'assets/istockphoto-1314193409-612x612-removebg-preview 6.png',
+      'amount': 999,
+      'title': '50% off',
+      'price': '\$2333',
+    },
+  ];
+  // Function to show the Google Pay-style bottom sheet
+  void _showPaymentSheet() {
+    showModalBottomSheet(
+      context: context,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
+      builder:
+          (context) => SizedBox(
+            height: MediaQuery.of(context).size.height * 0.38,
+            child: Padding(
+              // 2. Set to 70% of screen height
+              padding: const EdgeInsets.all(24),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text(
+                    "Google pay",
+                    style: TextStyle(
+                      color: Color(0xFF123B70),
+                      fontSize: 16,
+                    ),
+                  ),
+                  const Divider(color: Color.fromARGB(255, 48, 39, 39)),
+                  const SizedBox(height: 20),
+                  const Text(
+                    "Start by adding a payment method",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                      color: Color(0xFF123B70),
+                    ),
+                  ),
+                  const Text(
+                    "king@gmail.com",
+                    style: TextStyle(color: Color(0xff123B70)),
+                  ),
+                  const SizedBox(height: 40),
+                  const Text(
+                    "Add a payment method to your Google account to complete your purchase.Your payment information only visible to Google",
+                    style: TextStyle(fontSize: 13, color: Color(0xFF123B70)),
+                  ),
+                  const SizedBox(height: 40),
+                  // SizedBox(
+                  //   width: double.infinity,
+                  //   child: ElevatedButton.icon(
+                  //     style: ElevatedButton.styleFrom(
+                  //       backgroundColor: Colors.teal,
+                  //       padding: const EdgeInsets.symmetric(vertical: 15),
+                  //       shape: RoundedRectangleBorder(
+                  //         borderRadius: BorderRadius.circular(15),
+                  //       ),
+                  //     ),
+                  //     onPressed: () {},
+                  //     icon: const Icon(Icons.credit_card, color: Colors.white),
+                  //     label: const Text(
+                  //       "Add credit or debit card",
+                  //       style: TextStyle(color: Colors.white),
+                  //     ),
+                  //   ),
+                  // ),
+                  Center(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(16),
+                        color: Colors.teal,
+                      ),
+                      height: 45,
+                      width: 322,
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 70),
+                        child: Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(right: 10),
+                              child: Icon(Icons.credit_card,color: Colors.white,size: 27,),
+                            ),
+                            Text(
+                              'Add credit or debit card',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w500,
+                                fontSize: 15,
+                                color: Colors.white
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -91,33 +227,6 @@ class _SendgiftsState extends State<Sendgifts> {
                   width: 380,
                   child: Column(
                     children: [
-                      // Positioned(
-                      // top: 0,
-                      // right: 0,
-                      // child: Transform.rotate(angle: 45,
-                      //   child: Container(
-                      //     height: 50,
-                      //     width: 100,
-                      //     color: Colors.black,
-                      //     alignment: Alignment.center,
-                      // decoration: BoxDecoration(
-                      //   color: Colors.black,
-                      //   borderRadius: BorderRadius.only(
-                      //     topRight: Radius.circular(20),
-                      //     bottomLeft: Radius.circular(20),
-                      //   ),
-                      // ),
-                      //       child: Text(
-                      //         '50% OFF',
-                      //         style: TextStyle(
-                      //           color: Colors.white,
-                      //           fontWeight: FontWeight.w500,
-                      //           fontSize: 11,
-                      //         ),
-                      //       ),
-                      //     ),
-                      //   ),
-                      // ),
                       Padding(
                         padding: const EdgeInsets.only(left: 20, top: 40),
                         child: Row(
@@ -271,29 +380,65 @@ class _SendgiftsState extends State<Sendgifts> {
               ],
             ),
           ),
-        Expanded(
-          child: GridView.builder(
-            padding: const EdgeInsets.all(8),
-            itemCount: 6,
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2,
-              crossAxisSpacing: 10,
-              mainAxisSpacing: 10,
-              childAspectRatio: 1.5, // square items
+          Expanded(
+            child: GridView.builder(
+              padding: const EdgeInsets.all(8),
+              itemCount: 6,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                crossAxisSpacing: 10,
+                mainAxisSpacing: 10,
+                childAspectRatio: 1.5, // square items
+              ),
+              itemBuilder: (context, index) {
+                final item = items[index];
+                return Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Column(
+                    children: [
+                      Image.asset(
+                        item['image'],
+                        height: 55,
+                        width: 81,
+                        fit: BoxFit.contain,
+                      ),
+                      SizedBox(height: 10),
+                      Text(
+                        item['amount'].toString(),
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 14,
+                        ),
+                      ),
+                      Text(
+                        item['title'],
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 14,
+                        ),
+                      ),
+                      SizedBox(height: 5),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.teal,
+                          shape: const StadiumBorder(),
+                        ),
+                        onPressed: _showPaymentSheet,
+                        child: Text(
+                          item['price'],
+                          style: const TextStyle(color: Colors.white),
+                        ),
+                      ),
+                    ],
+                  ),
+                );
+              },
             ),
-            itemBuilder: (context, index) {
-              return Container(
-                decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(20),
-                ),
-                child: Center(
-          child: Text(''),
-                ),
-              );
-            },
           ),
-        ),]
+        ],
       ),
     );
   }
