@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_6/paymentmethods.dart';
 
 class Sendgifts extends StatefulWidget {
   const Sendgifts({super.key});
@@ -65,10 +66,7 @@ class _SendgiftsState extends State<Sendgifts> {
                 children: [
                   const Text(
                     "Google pay",
-                    style: TextStyle(
-                      color: Color(0xFF123B70),
-                      fontSize: 16,
-                    ),
+                    style: TextStyle(color: Color(0xFF123B70), fontSize: 16),
                   ),
                   const Divider(color: Color.fromARGB(255, 48, 39, 39)),
                   const SizedBox(height: 20),
@@ -109,30 +107,45 @@ class _SendgiftsState extends State<Sendgifts> {
                   //   ),
                   // ),
                   Center(
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(16),
-                        color: Colors.teal,
-                      ),
-                      height: 45,
-                      width: 322,
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 70),
-                        child: Row(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(right: 10),
-                              child: Icon(Icons.credit_card,color: Colors.white,size: 27,),
-                            ),
-                            Text(
-                              'Add credit or debit card',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                fontSize: 15,
-                                color: Colors.white
+                    child: GestureDetector(
+                      onTap: () {
+                        Paymentmethods;
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Paymentmethods(),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(16),
+                          color: Colors.teal,
+                        ),
+                        height: 45,
+                        width: 322,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 70),
+                          child: Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.only(right: 10),
+                                child: Icon(
+                                  Icons.credit_card,
+                                  color: Colors.white,
+                                  size: 27,
+                                ),
                               ),
-                            ),
-                          ],
+                              Text(
+                                'Add credit or debit card',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 15,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
