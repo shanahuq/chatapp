@@ -102,21 +102,27 @@ class _AddcardState extends State<Addcard> {
           Row(
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 40,top: 50),
+                padding: const EdgeInsets.only(left: 40, top: 50),
                 child: Column(
                   children: [
                     Text(
                       'Express',
-                      style: TextStyle(fontWeight: FontWeight.w500, fontSize: 13),
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 13,
+                      ),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(right: 20),
                       child: Text(
                         '10/25/2030',
-                        style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 16,
+                        ),
                       ),
                     ),
-                    Divider(color: Color(0xff000000),)
+                    Divider(color: Color(0xff000000)),
                   ],
                 ),
               ),
