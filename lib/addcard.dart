@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_6/comments.dart';
 
 class Addcard extends StatefulWidget {
   const Addcard({super.key});
@@ -102,7 +103,7 @@ class _AddcardState extends State<Addcard> {
           Row(
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 40, top: 50),
+                padding: const EdgeInsets.only(left: 30, top: 50),
                 child: Column(
                   children: [
                     Text(
@@ -113,7 +114,7 @@ class _AddcardState extends State<Addcard> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(right: 20),
+                      padding: const EdgeInsets.only(left: 20),
                       child: Text(
                         '10/25/2030',
                         style: TextStyle(
@@ -122,11 +123,119 @@ class _AddcardState extends State<Addcard> {
                         ),
                       ),
                     ),
-                    Divider(color: Color(0xff000000)),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 90, top: 50),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(right: 35),
+                      child: Text(
+                        'CVV',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 13,
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 5),
+                      child: Text(
+                        '**********',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),
             ],
+          ),
+          Row(
+            children: const [
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.only(right: 20, left: 50),
+                  child: Divider(color: Color(0xff000000)),
+                ),
+              ),
+              SizedBox(),
+              Expanded(
+                child: Padding(
+                  padding: EdgeInsets.only(left: 20, right: 50),
+                  child: Divider(color: Color(0xff000000)),
+                ),
+              ),
+            ],
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 92),
+            child: Text(
+              'Debit cards are accepted at some locations and for some categories.',
+              style: TextStyle(fontWeight: FontWeight.w500, fontSize: 9),
+            ),
+          ),
+          Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 70, top: 32),
+                child: Container(
+                  child: Image.asset('assets/image 6.png'),
+                  height: 30,
+                  width: 54,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 32, left: 15),
+                child: Container(
+                  child: Image.asset('assets/image 9.png'),
+                  height: 34,
+                  width: 54,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 32, left: 81),
+                child: Container(
+                  child: Image.asset('assets/image 7.png'),
+                  height: 34,
+                  width: 57,
+                ),
+              ),
+            ],
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 33),
+            child: GestureDetector(
+              onTap: () {
+                Comments;
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Comments()),
+                );
+              },
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Colors.teal,
+                ),
+                height: 42,
+                width: 322,
+                child: Center(
+                  child: Text(
+                    'ADD PAYMENT METHOD',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 15,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+            ),
           ),
         ],
       ),
