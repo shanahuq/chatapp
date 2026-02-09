@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_6/addcard.dart';
 
 class Paymentmethods extends StatefulWidget {
   const Paymentmethods({super.key});
@@ -36,7 +37,7 @@ class _PaymentmethodsState extends State<Paymentmethods> {
       body: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.only(left: 50, top: 47),
+            padding: const EdgeInsets.only(left: 20, top: 47),
             child: Text(
               'Payments methods',
               style: TextStyle(
@@ -52,7 +53,7 @@ class _PaymentmethodsState extends State<Paymentmethods> {
           Row(
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 100, top: 16),
+                padding: const EdgeInsets.only(left: 70, top: 16),
                 child: Text(
                   'choose desired payment type. We offer easy ways\n for payments on our app',
                   style: TextStyle(
@@ -189,7 +190,7 @@ class _PaymentmethodsState extends State<Paymentmethods> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 45, left: 100),
+            padding: const EdgeInsets.only(top: 45, left: 70),
             child: Row(
               children: [
                 Text(
@@ -232,26 +233,74 @@ class _PaymentmethodsState extends State<Paymentmethods> {
                     padding: const EdgeInsets.only(),
                     child: Column(
                       children: [
-                        Text(
-                          'Cash payment',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 16,
-                            color: Colors.black,
+                        Padding(
+                          padding: const EdgeInsets.only(left: 25, top: 10),
+                          child: Text(
+                            'Cash payment',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16,
+                              color: Colors.black,
+                            ),
                           ),
                         ),
-                        Text(
-                          'Default method',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 11,
-                            color: Color(0xff9A8A8A),
+                        Padding(
+                          padding: const EdgeInsets.only(),
+                          child: Text(
+                            'Default method',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 11,
+                              color: Color(0xff9A8A8A),
+                            ),
                           ),
                         ),
                       ],
                     ),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 70),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(9),
+                        color: Color(0xff123B70),
+                      ),
+                      child: Icon(
+                        Icons.keyboard_arrow_down,
+                        color: Colors.white,
+                      ),
+                      height: 28,
+                      width: 28,
+                    ),
+                  ),
                 ],
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 45),
+            child: GestureDetector(
+              onTap: () {
+               Addcard;
+               Navigator.push(context, MaterialPageRoute(builder: (context) => Addcard(),)) ;
+              },
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Colors.teal,
+                ),
+                height: 42,
+                width: 322,
+                child: Center(
+                  child: Text(
+                    'ADD PAYMENT METHOD',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 15,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
               ),
             ),
           ),

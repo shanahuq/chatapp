@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_6/onboarding.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -14,7 +15,12 @@ class _HomeState extends State<Home> {
       backgroundColor: Colors.teal,
       body: Column(mainAxisAlignment: MainAxisAlignment.center,
         children: [
-       Center(child: Container(child: Image.asset('assets/JPEG4-removebg-preview 1.png',height: 257,width: 321,),)) 
+       Center(child: GestureDetector(
+        onTap: () {
+          Onboarding;
+          Navigator.push(context, MaterialPageRoute(builder: (context) => Onboarding(),));
+        },
+        child: Container(child: Image.asset('assets/JPEG4-removebg-preview 1.png',height: 257,width: 321,),))) 
         ],
       ),
     );

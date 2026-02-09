@@ -58,30 +58,36 @@ class _GroupmessageState extends State<Groupmessage> {
                 },
                 child: Padding(
                   padding: const EdgeInsets.only(left: 30),
-                  child: Row(
-                    children: [
-                      CircleAvatar(
-                        radius: 20,
-                        backgroundColor: Colors.white,
-                        child: Icon(Icons.photo_camera_outlined),
-                        // child: ListTile(
-                        //   leading: Center(child: const Icon(Icons.insert_drive_file)),
-                        //   title: const Text("Document"),
-                        //   onTap: () {
-                        //     Navigator.pop(context);
-                        //   },
-                        // ),
-                      ),
-                      SizedBox(width: 20),
-                      Text(
-                        'Camera',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 14,
-                          color: Colors.white,
+                  child: SingleChildScrollView(scrollDirection: Axis.vertical,
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            CircleAvatar(
+                              radius: 20,
+                              backgroundColor: Colors.white,
+                              child: Icon(Icons.photo_camera_outlined),
+                              // child: ListTile(
+                              //   leading: Center(child: const Icon(Icons.insert_drive_file)),
+                              //   title: const Text("Document"),
+                              //   onTap: () {
+                              //     Navigator.pop(context);
+                              //   },
+                              // ),
+                            ),
+                            SizedBox(width: 20),
+                            Text(
+                              'Camera',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w600,
+                                fontSize: 14,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
               ),

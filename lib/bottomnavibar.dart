@@ -20,7 +20,7 @@ class _BottomnavibarState extends State<Bottomnavibar> {
     Calls(),
     Profile()
   ];
-  // void _onitemtapped(int index)
+  // void _onitemtapped(int index)    ghgfg
   // {
   //   setState(() {
   //   selected_intex =index;  
