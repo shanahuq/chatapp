@@ -184,7 +184,7 @@ class _AddcardState extends State<Addcard> {
               Padding(
                 padding: const EdgeInsets.only(left: 70, top: 32),
                 child: Container(
-                  child: Image.asset('assets/image 6.png'),
+                  child: Image.asset('assets/image 61 (1).png'),
                   height: 30,
                   width: 54,
                 ),
@@ -200,7 +200,7 @@ class _AddcardState extends State<Addcard> {
               Padding(
                 padding: const EdgeInsets.only(top: 32, left: 81),
                 child: Container(
-                  child: Image.asset('assets/image 7.png'),
+                  child: Image.asset('assets/image 71 (1).png'),
                   height: 34,
                   width: 57,
                 ),
