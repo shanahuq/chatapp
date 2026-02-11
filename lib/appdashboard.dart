@@ -188,8 +188,83 @@ class _AppdashboardState extends State<Appdashboard> {
               ),
             ),
           ),
+          Stack(
+            children: [
+              // 1. THE FULL BACKGROUND TRACK (Largest - 20000 pts)
+              Container(
+                height: 15, // Increased height for better visibility
+                width: 350,
+                alignment: Alignment.centerRight,
+                padding: const EdgeInsets.only(right: 20),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.grey[300], // Light grey background
+                ),
+                child: const Text(
+                  "20000 points",
+                  style: TextStyle(fontSize: 10, color: Color(0xff987373)),
+                ),
+              ),
+
+              // 2. THE MIDDLE SEGMENT (Medium - 10000 pts)
+              Container(
+                height: 15,
+                width: 250, // Shorter than the background
+                alignment: Alignment.centerRight,
+                padding: const EdgeInsets.only(right: 20),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: const Color(0xffB2EBF2),
+                  boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 2)],
+                ),
+                child: const Text(
+                  "10000 points",
+                  style: TextStyle(fontSize: 10, color: Color(0xff987373)),
+                ),
+              ),
+
+              // 3. THE ACTIVE SEGMENT (Smallest - 1000 pts)
+              Container(
+                height: 15,
+                width: 160, // Shortest
+                alignment: Alignment.centerRight,
+                padding: const EdgeInsets.only(right: 20),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: const Color.fromARGB(
+                    255,
+                    130,
+                    231,
+                    245,
+                  ), // Bright active color
+                ),
+                child: const Text(
+                  "5000 points",
+                  style: TextStyle(fontSize: 10, color: Color(0xff987373)),
+                ),
+              ),
+              Container(
+                height: 15,
+                width: 70, // Shortest
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: const Color.fromARGB(
+                    255,
+                    55,
+                    221,
+                    199,
+                  ), // Bright active color
+                ),
+                child: const Text(
+                  "1000 points",
+                  style: TextStyle(fontSize: 10, color: Color(0xff987373)),
+                ),
+              ),
+            ],
+          ),
           Padding(
-            padding: const EdgeInsets.only(right: 90, top: 90),
+            padding: const EdgeInsets.only(right: 90, top: 10),
             child: Text(
               'Payment options for members',
               style: TextStyle(
