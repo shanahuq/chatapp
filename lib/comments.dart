@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_6/appdashboard.dart';
+import 'appdashboard.dart';
 
 class Comments extends StatefulWidget {
   const Comments({super.key});

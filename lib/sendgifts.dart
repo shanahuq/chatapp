@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_6/paymentmethods.dart';
+import 'paymentmethods.dart';
 
 class Sendgifts extends StatefulWidget {
   const Sendgifts({super.key});

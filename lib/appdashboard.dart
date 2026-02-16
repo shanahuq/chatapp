@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_6/contactsofgiftsending.dart';
+import 'contactsofgiftsending.dart';
 
 class Appdashboard extends StatefulWidget {
   const Appdashboard({super.key});

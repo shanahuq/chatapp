@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_6/calls.dart';
-import 'package:flutter_application_6/home1.dart';
-import 'package:flutter_application_6/profile.dart';
-import 'package:flutter_application_6/videochat.dart';
+import 'calls.dart';
+import 'home1.dart';
+import 'profile.dart';
+import 'videochat.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class Bottomnavibar extends StatefulWidget {

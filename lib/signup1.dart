@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_6/home1.dart';
+import 'home1.dart';
 
 class Signup1 extends StatefulWidget {
   const Signup1({super.key});

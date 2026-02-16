@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_6/gift.dart';
+import 'gift.dart';
 
 class Groupmessage extends StatefulWidget {
   const Groupmessage({super.key, required this.image, required this.name});

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_6/onboarding.dart';
+import 'onboarding.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});

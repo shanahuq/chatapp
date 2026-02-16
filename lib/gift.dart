@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_6/sendgifts.dart';
+import 'sendgifts.dart';
 
 class Gift extends StatefulWidget {
   const Gift({super.key});

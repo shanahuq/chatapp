@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_6/bottomnavibar.dart';
-import 'package:flutter_application_6/contactsofgiftsending.dart';
-import 'package:flutter_application_6/home.dart';
-import 'package:flutter_application_6/home1.dart';
-import 'package:flutter_application_6/onboarding.dart';
-import 'package:flutter_application_6/signin.dart';
-import 'package:flutter_application_6/signin1.dart';
-import 'package:flutter_application_6/signup.dart';
-import 'package:flutter_application_6/signup1.dart';
+import 'package:flutter_application_6/startscreen.dart';
+import 'bottomnavibar.dart';
+import 'contactsofgiftsending.dart';
+import 'home.dart';
+import 'home1.dart';
+import 'onboarding.dart';
+import 'signin.dart';
+import 'signin1.dart';
+import 'signup.dart';
+import 'signup1.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const Bottomnavibar(),
+      home: const Startscreen(),
       // home: Contactsofgiftsending(),
     );
   }

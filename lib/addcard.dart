@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_6/comments.dart';
+import 'comments.dart';
 
 class Addcard extends StatefulWidget {
   const Addcard({super.key});

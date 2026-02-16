@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_6/addcard.dart';
+import 'addcard.dart';
 
 class Paymentmethods extends StatefulWidget {
   const Paymentmethods({super.key});

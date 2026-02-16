@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_6/chatscreen.dart';
-import 'package:flutter_application_6/groupmessage.dart';
+import 'chatscreen.dart';
+import 'groupmessage.dart';
 import 'package:flutter_swipe_action_cell/flutter_swipe_action_cell.dart';
 
 class Home1 extends StatefulWidget {
