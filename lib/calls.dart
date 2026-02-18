@@ -1,5 +1,6 @@
 import 'package:call_slider_button/call_slider_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_6/videocall.dart';
 
 class Calls extends StatefulWidget {
   const Calls({super.key});
@@ -9,225 +10,166 @@ class Calls extends StatefulWidget {
 }
 
 class _CallsState extends State<Calls> {
-  double _dragPosition = 0;
-  final double _maxDrag = 250;
-
   @override
   Widget build(BuildContext context) {
+    // Get screen size to make background responsive
+    final Size size = MediaQuery.of(context).size;
+
     return Scaffold(
-      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Column(
-          children: [
-            Stack(
-              children: [
-                Container(
-                  height: 800,
-                  width: 490,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Image.asset(
-                    'assets/download (22) 2.png',
-                    fit: BoxFit.fill,
-                  ),
-                ),
-                Center(
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 200),
-                    child: CircleAvatar(
-                      radius: 80,
-                      child: Image.asset(
-                        'assets/Ellipse 311.png',
-                        fit: BoxFit.fill,
-                      ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 380),
-                  child: Center(
-                    child: Text(
-                      'Borsha Akther',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                        fontSize: 25,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                ),
-                Center(
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 415),
-                    child: Text(
-                      'Incoming call',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 16,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 100, top: 550),
-                  child: Row(
-                    children: [
-                      Icon(Icons.alarm, color: Colors.white, size: 24),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 230),
-                        child: Container(
-                          height: 26,
-                          width: 26,
-                          child: Image.asset(
-                            'assets/Message.png',
-                            fit: BoxFit.fill,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 70, top: 580),
-                  child: Row(
-                    children: [
-                      Text(
-                        'Remind me',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                          fontSize: 16,
-                          color: Colors.white,
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 180),
-                        child: Text(
-                          'Message',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 16,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Center(
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 660),
-                    child: Container(
-                      height: 60,
-                      width: 275,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(40),
-                        color: const Color.fromARGB(
-                          19,
-                          0,
-                          0,
-                          0,
-                        ).withOpacity(0.4),
-                      ),
-                      
-                      child: Row(
-                        children: [
-                          // Padding(
-                          //   padding: const EdgeInsets.only(left: 10),
-                          //   child: Image.asset(
-                          //     'assets/Group 153.png',
-                          //     height: 42,
-                          //     width: 42,
-                          //   ),
-                          // ),
-                          // Padding(
-                          //   padding: const EdgeInsets.only(left: 30),
-                          //   child: Text(
-                          //     'slide to answer',
-                          //     style: TextStyle(
-                          //       fontWeight: FontWeight.w500,
-                          //       fontSize: 18,
-                          //       color: Colors.white,
-                          //     ),
-                          //   ),
-                          // ),
-                          CallSliderButton(
-            onAccept: () => debugPrint("Call accepted!"),
-            onDecline: () => debugPrint("Call declined!"),
+      body: Stack(
+        children: [
+          SizedBox(
+            height: size.height,
+            width: size.width,
+            child: Image.asset(
+              'assets/download (22) 2.png',
+              fit: BoxFit.cover, // Cover ensures it fills without stretching
+            ),
           ),
-                        ],
-                      ),
+
+          Padding(
+            padding: const EdgeInsets.only(top: 220, left: 160),
+            child: Column(
+              children: [
+                CircleAvatar(
+                  radius: 80,
+                  backgroundColor: Colors.white24,
+                  child: ClipOval(
+                    child: Image.asset(
+                      'assets/Ellipse 311.png',
+                      fit: BoxFit.cover,
+                      width: 160,
+                      height: 160,
                     ),
                   ),
                 ),
-                
+
+                const SizedBox(height: 20),
+
+                // Name
+                const Text(
+                  'Borsha Akther',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 32,
+                    color: Colors.white,
+                  ),
+                ),
+
+                const SizedBox(height: 8),
+
+                // Status
+                const Text(
+                  'Incoming call',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 18,
+                    color: Colors.white70,
+                  ),
+                ),
               ],
             ),
-            // Positioned(
-            //   bottom: 60,
-            //   left: 40,
-            //   right: 40,
-            //   child: Container(
-            //     height: 70,
-            //     decoration: BoxDecoration(
-            //       color: Colors.black.withOpacity(0.4),
-            //       borderRadius: BorderRadius.circular(40),
-            //     ),
-            //     child: Stack(
-            //       alignment: Alignment.centerLeft,
-            //       children: [
-            //         Center(
-            //           child: Text(
-            //             "slide to answer",
-            //             style: TextStyle(
-            //               color: Colors.white70,
-            //               fontSize: 16,
-            //               fontWeight: FontWeight.w500,
-            //             ),
-            //           ),
-            //         ),
-            //         Positioned(
-            //           left: _dragPosition,
-            //           child: GestureDetector(
-            //             onHorizontalDragUpdate: (details) {
-            //               setState(() {
-            //                 _dragPosition += details.delta.dx;
-            //                 if (_dragPosition < 0) _dragPosition = 0;
-            //                 if (_dragPosition > _maxDrag) {
-            //                   _dragPosition = _maxDrag;
-            //                 }
-            //               });
-            //             },
-            //             onHorizontalDragEnd: (details) {
-            //               if (_dragPosition >= _maxDrag) {
-            //                 print("Call Answered");
-            //               }
-            //               setState(() {
-            //                 _dragPosition = 0;
-            //               });
-            //             },
-            //             child: Container(
-            //               width: 60,
-            //               height: 60,
-            //               decoration: const BoxDecoration(
-            //                 color: Colors.white,
-            //                 shape: BoxShape.circle,
-            //               ),
-            //               child: const Icon(
-            //                 Icons.call,
-            //                 color: Colors.green,
-            //                 size: 30,
-            //               ),
-            //             ),
-            //           ),
-            //         ),
-            //       ],
-            //     ),
-            //   ),
-            // ),
-          ],
-        ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 540, left: 100),
+            child: Row(
+              children: [
+                Icon(Icons.alarm, color: Colors.white, size: 26),
+                Padding(
+                  padding: const EdgeInsets.only(left: 220),
+                  child: Container(
+                    height: 26,
+                    width: 26,
+                    child: Image.asset('assets/Message.png'),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 570, left: 70),
+            child: Row(
+              children: [
+                Text(
+                  'Remind me',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 16,
+                    color: Colors.white,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 175),
+                  child: Text(
+                    'Message',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 16,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Positioned(
+            bottom: 60,
+            left: 30,
+            right: 30,
+            child: Container(
+              height: 65,
+              decoration: BoxDecoration(
+                color: Colors.black.withOpacity(
+                  0.35,
+                ), // translucent black background
+                borderRadius: BorderRadius.circular(40), // rounded corners
+              ),
+              child: CallSliderButton(
+                height: 65,
+                backgroundColor:
+                    Colors
+                        .transparent, // container already colored, keep transparent here
+                // sliderButtonIcon: Container(
+                //   width: 55,
+                //   height: 55,
+                //   decoration: const BoxDecoration(
+                //     color: Colors.white, // white circle behind icon
+                //     shape: BoxShape.circle,
+                //   ),
+                //   child: const Icon(
+                //     Icons.call,
+                //     color: Colors.green,
+                //     size: 30,
+                //   ),
+                // ),
+                // text: 'slide to answer',
+                acceptIcon: Icon(Icons.call),
+                textStyle: const TextStyle(
+                  color: Colors.white70, // subtle white text color
+                  fontSize: 18,
+                  fontWeight: FontWeight.w500,
+                ),
+                onAccept: () {
+                  debugPrint("Call accepted!");
+                  GestureDetector(
+              onTap: () {
+                Videocall;
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Videocall()),
+                );
+              }
+                );
+              
+                
+                },
+                onDecline: () {
+                  debugPrint("Call declined!");
+                },
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
