@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_6/groupcall.dart';
 import 'package:flutter_application_6/startscreen.dart';
 import 'bottomnavibar.dart';
 import 'contactsofgiftsending.dart';
@@ -40,7 +41,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const Bottomnavibar(),
+      home: const Groupcall(),
       // home: Contactsofgiftsending(),
     );
   }

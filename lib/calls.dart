@@ -125,48 +125,28 @@ class _CallsState extends State<Calls> {
                 borderRadius: BorderRadius.circular(40), // rounded corners
               ),
               child: CallSliderButton(
-                height: 65,
-                backgroundColor:
-                    Colors
-                        .transparent, // container already colored, keep transparent here
-                // sliderButtonIcon: Container(
-                //   width: 55,
-                //   height: 55,
-                //   decoration: const BoxDecoration(
-                //     color: Colors.white, // white circle behind icon
-                //     shape: BoxShape.circle,
-                //   ),
-                //   child: const Icon(
-                //     Icons.call,
-                //     color: Colors.green,
-                //     size: 30,
-                //   ),
-                // ),
-                // text: 'slide to answer',
-                acceptIcon: Icon(Icons.call),
-                textStyle: const TextStyle(
-                  color: Colors.white70, // subtle white text color
-                  fontSize: 18,
-                  fontWeight: FontWeight.w500,
-                ),
-                onAccept: () {
-                  debugPrint("Call accepted!");
-                  GestureDetector(
-              onTap: () {
-                Videocall;
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Videocall()),
-                );
-              }
-                );
-              
-                
-                },
-                onDecline: () {
-                  debugPrint("Call declined!");
-                },
-              ),
+  height: 65,
+  backgroundColor: Colors.transparent,
+  acceptIcon: const Icon(Icons.call, color: Colors.green),
+  textStyle: const TextStyle(
+    color: Colors.white70,
+    fontSize: 18,
+    fontWeight: FontWeight.w500,
+  ),
+
+  onAccept: () {
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const Videocall(),
+      ),
+    );
+  },
+
+  onDecline: () {
+    debugPrint("Call declined!");
+  },
+),
             ),
           ),
         ],
