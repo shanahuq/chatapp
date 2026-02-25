@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_6/calls.dart';
 
 class Searchingscreen extends StatefulWidget {
   const Searchingscreen({super.key});
@@ -30,10 +31,19 @@ class _SearchingscreenState extends State<Searchingscreen> {
           Padding(
             padding: const EdgeInsets.only(top: 140),
             child: Center(
-              child: Container(
-                height: 334,
-                width: 334,
-                child: Image.asset('assets/Ellipse 48.png'),
+              child: GestureDetector(
+                onTap: () {
+                  Calls;
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Calls()),
+                  );
+                },
+                child: Container(
+                  height: 334,
+                  width: 334,
+                  child: Image.asset('assets/Ellipse 48.png'),
+                ),
               ),
             ),
           ),

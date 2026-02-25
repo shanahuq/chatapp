@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_6/calls1.dart';
 import 'calls.dart';
 import 'home1.dart';
 import 'profile.dart';
@@ -17,7 +18,7 @@ class _BottomnavibarState extends State<Bottomnavibar> {
   final List <Widget>pages=[
     Videochat(),
     Home1(),
-    Calls(),
+    Calls1(),
     Profile()
   ];
   // void _onitemtapped(int index)    ghgfg
