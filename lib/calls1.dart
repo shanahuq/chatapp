@@ -81,7 +81,7 @@ class _Calls1State extends State<Calls1> {
           children: [
             Padding(
               padding: const EdgeInsets.only(top: 30, left: 20),
-              child: Row(
+              child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
                     height: 44,
@@ -93,7 +93,7 @@ class _Calls1State extends State<Calls1> {
                     child: Icon(Icons.search, color: Colors.white, size: 28),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 150),
+                    padding: const EdgeInsets.only(left: 0),
                     child: Text(
                       'Calls',
                       style: TextStyle(
@@ -104,7 +104,7 @@ class _Calls1State extends State<Calls1> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 150),
+                    padding: const EdgeInsets.only(right: 16),
                     child: GestureDetector(
                       onTap: () {
                         Contacts;
