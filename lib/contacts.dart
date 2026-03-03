@@ -19,8 +19,7 @@ class _ContactsState extends State<Contacts> {
       'name': 'Adil Adnan',
       'message': 'Be your own hero 💪',
     },
-  ];
-  final List<Map<String, dynamic>> b = [
+
     {
       'image': 'assets/yellow.png',
       'name': 'Bristy Haque',
@@ -36,7 +35,40 @@ class _ContactsState extends State<Contacts> {
       'name': 'Borsha Akther',
       'message': 'Flowers are beautiful 🌸',
     },
+    {
+      'image': 'assets/Ellipse 311.png',
+      'name': 'Borsha Akther khan',
+      'message': 'Flowers are beautiful 🌸',
+    },
+     {
+      'image': 'assets/yellow.png',
+      'name': 'Cristy Haque',
+      'message': 'Keep working ✍',
+    },
   ];
+
+  @override
+  void initState() {
+    super.initState();
+    chat.sort((a, b) => a['name'].compareTo(b['name']));
+  }
+
+  Map<String, List<Map<String, dynamic>>> groupedContacts() {
+    Map<String, List<Map<String, dynamic>>> grouped = {};
+
+    for (var contact in chat) {
+      String firstLetter = contact['name'][0].toUpperCase();
+
+      if (!grouped.containsKey(firstLetter)) {
+        grouped[firstLetter] = [];
+      }
+
+      grouped[firstLetter]!.add(contact);
+    }
+
+    return grouped;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -89,128 +121,49 @@ class _ContactsState extends State<Contacts> {
             ),
             SizedBox(height: 40),
             Expanded(
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.vertical(top: Radius.circular(30)),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(height: 40),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 40),
-                      child: Text(
-                        "Recent",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 16,
-                        ),
-                      ),
-                    ),
-                    SizedBox(height: 15),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 40),
-                      child: Text(
-                        'A',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 18,
-                        ),
-                      ),
-                    ),
-                    SizedBox(height: 10),
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.only(left: 15),
-                        child: ListView.separated(
-                          itemCount: chat.length,
-                          itemBuilder: (context, index) {
-                            return ListTile(
-                              leading: CircleAvatar(
-                                backgroundImage: AssetImage(
-                                  chat[index]['image'],
-                                ),
-                              ),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Builder(
+                  builder: (context) {
+                    final grouped = groupedContacts();
+                    final letters = grouped.keys.toList()..sort();
 
-                              title: Row(
-                                children: [
-                                  Text(
-                                    chat[index]['name'],
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w600,
-                                      fontSize: 16,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              subtitle: Text(
-                                chat[index]['message'],
-                                style: TextStyle(
-                                  color: Colors.grey[600],
-                                  fontSize: 14,
-                                ),
-                              ),
-                            );
-                          },
+                    return ListView.builder(
+                      itemCount: letters.length,
+                      itemBuilder: (context, index) {
+                        String letter = letters[index];
+                        List contacts = grouped[letter]!;
 
-                          separatorBuilder: (context, index) {
-                            return SizedBox(
-                              height: 20,
-                            ); // 👈 space between items
-                          },
-                        ),
-                      ),
-                    ),
-                    // SizedBox(height: 10),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 40,bottom: 280),
-                      child: Text(
-                        'B',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 18,
-                        ),
-                      ),
-                    ),
-                    Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.only(),
-                        child: ListView.separated(
-                          itemBuilder: (context, index) {
-                            return ListTile(
-                              leading: CircleAvatar(
-                                child: Image.asset(b[index]['image']),
+                        return Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SizedBox(height: 20),
+                            Text(
+                              letter,
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18,
                               ),
-                              title: Row(
-                                children: [
-                                  Text(
-                                    b[index]['name'],
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w600,
-                                      fontSize: 16,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              subtitle: Text(
-                                b[index]['message'],
-                                style: TextStyle(
-                                  color: Colors.grey[600],
-                                  fontSize: 14,
+                            ),
+                            SizedBox(height: 10),
+
+                            ...contacts.map((contact) {
+                              return ListTile(
+                                leading: CircleAvatar(
+                                  backgroundImage: AssetImage(contact['image']),
                                 ),
-                              ),
-                            );
-                          },
-                          separatorBuilder: (context, index) {
-                            return SizedBox(height: 20);
-                          },
-                          itemCount: b.length,
-                          scrollDirection: Axis.vertical,
-                        ),
-                      ),
-                    ),
-                  ],
+                                title: Text(
+                                  contact['name'],
+                                  style: TextStyle(fontWeight: FontWeight.w600),
+                                ),
+                                subtitle: Text(contact['message']),
+                              );
+                            }).toList(),
+                          ],
+                        );
+                      },
+                    );
+                  },
                 ),
               ),
             ),
