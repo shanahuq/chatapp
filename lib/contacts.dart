@@ -78,7 +78,7 @@ class _ContactsState extends State<Contacts> {
           children: [
             Padding(
               padding: const EdgeInsets.only(top: 30, left: 20),
-              child: Row(
+              child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
                     height: 44,
@@ -90,7 +90,7 @@ class _ContactsState extends State<Contacts> {
                     child: Icon(Icons.search, color: Colors.white, size: 28),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 150),
+                    padding: const EdgeInsets.only(left: 0),
                     child: Text(
                       'Contacts',
                       style: TextStyle(
@@ -101,7 +101,7 @@ class _ContactsState extends State<Contacts> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 130),
+                    padding: const EdgeInsets.only(right: 30),
                     child: Container(
                       height: 44,
                       width: 44,
