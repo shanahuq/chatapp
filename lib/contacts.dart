@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_6/search.dart';
 
 class Contacts extends StatefulWidget {
   const Contacts({super.key});
@@ -36,14 +37,9 @@ class _ContactsState extends State<Contacts> {
       'message': 'Flowers are beautiful 🌸',
     },
     {
-      'image': 'assets/Ellipse 311.png',
-      'name': 'Borsha Akther khan',
-      'message': 'Flowers are beautiful 🌸',
-    },
-     {
-      'image': 'assets/yellow.png',
-      'name': 'Cristy Haque',
-      'message': 'Keep working ✍',
+      'image': 'assets/Ellipse 304 (2).png',
+      'name': 'sheik Sadi ',
+      'message': 'Life is beautiful 👌',
     },
   ];
 
@@ -78,16 +74,26 @@ class _ContactsState extends State<Contacts> {
           children: [
             Padding(
               padding: const EdgeInsets.only(top: 30, left: 20),
-              child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    height: 44,
-                    width: 44,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50),
-                      border: Border.all(color: Colors.white),
+                  GestureDetector(
+                    onTap: () {
+                      Search;
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Search()),
+                      );
+                    },
+                    child: Container(
+                      height: 44,
+                      width: 44,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        border: Border.all(color: Colors.white),
+                      ),
+                      child: Icon(Icons.search, color: Colors.white, size: 28),
                     ),
-                    child: Icon(Icons.search, color: Colors.white, size: 28),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 0),
@@ -121,8 +127,17 @@ class _ContactsState extends State<Contacts> {
             ),
             SizedBox(height: 40),
             Expanded(
-              child: Padding(
+              child: Container(
+                width: double.infinity,
+                margin: const EdgeInsets.only(top: 20),
                 padding: const EdgeInsets.symmetric(horizontal: 20),
+                decoration: const BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30),
+                    topRight: Radius.circular(30),
+                  ),
+                ),
                 child: Builder(
                   builder: (context) {
                     final grouped = groupedContacts();
@@ -137,7 +152,7 @@ class _ContactsState extends State<Contacts> {
                         return Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            SizedBox(height: 20),
+                            SizedBox(height: 40),
                             Text(
                               letter,
                               style: TextStyle(

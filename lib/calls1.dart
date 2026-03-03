@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_6/contacts.dart';
+import 'package:flutter_application_6/search.dart';
 
 class Calls1 extends StatefulWidget {
   const Calls1({super.key});
@@ -81,16 +82,26 @@ class _Calls1State extends State<Calls1> {
           children: [
             Padding(
               padding: const EdgeInsets.only(top: 30, left: 20),
-              child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    height: 44,
-                    width: 44,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50),
-                      border: Border.all(color: Colors.white),
+                  GestureDetector(
+                    onTap: () {
+                      Search;
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Search()),
+                      );
+                    },
+                    child: Container(
+                      height: 44,
+                      width: 44,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        border: Border.all(color: Colors.white),
+                      ),
+                      child: Icon(Icons.search, color: Colors.white, size: 28),
                     ),
-                    child: Icon(Icons.search, color: Colors.white, size: 28),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 0),
