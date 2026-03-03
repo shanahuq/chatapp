@@ -56,79 +56,78 @@ class _SearchState extends State<Search> {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 30, left: 20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              padding: const EdgeInsets.only(top: 30, left: 20, right: 20),
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: 'People',
+                  prefixIcon: Icon(Icons.search, size: 30, color: Colors.black),
+                  suffixIcon: Icon(Icons.close, color: Colors.black),
+                  // border: OutlineInputBorder(
+                  //   borderRadius: BorderRadius.circular(10),
+                  // ),
+                  contentPadding: EdgeInsets.symmetric(vertical: 15),
+                ),
+              ),
+            ),
+            SizedBox(height: 30),
+
+            // 👇 This Expanded gives ListView proper height
+            Expanded(
+              child: ListView(
                 children: [
-                  Expanded(
-                    child: TextField(
-                      decoration: InputDecoration(
-                        hintText: 'People',
-                        prefixIcon: Icon(
-                          Icons.search,
-                          size: 35,
-                          color: Colors.black,
+                  if (people.isNotEmpty)
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Text(
+                        'People',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
                         ),
-                        suffixIcon: Padding(
-                          padding: const EdgeInsets.only(right: 40),
-                          child: Icon(Icons.close, color: Colors.black),
-                        ),
-                        border: InputBorder.none,
-                        contentPadding: EdgeInsets.symmetric(vertical: 15),
                       ),
                     ),
-                  ),
-                  Expanded(
-                    child: ListView(
-                      children: [
-                        // People Section
-                        if (people.isNotEmpty)
-                          Padding(
-                            padding: const EdgeInsets.all(10.0),
-                            child: Text(
-                              'People',
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ...people.map(
-                          (item) => ListTile(
-                            leading: CircleAvatar(
-                              backgroundImage: AssetImage(item['image']),
-                            ),
-                            title: Text(item['name']),
-                            subtitle: Text(item['message']),
-                          ),
-                        ),
+                  SizedBox(height: 20),
 
-                        // Groups Section
-                        if (groups.isNotEmpty)
-                          Padding(
-                            padding: const EdgeInsets.all(10.0),
-                            child: Text(
-                              'Group Chats',
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ...groups.map(
-                          (item) => ListTile(
-                            leading: CircleAvatar(
-                              backgroundImage: AssetImage(item['image']),
-                            ),
-                            title: Text(item['name']),
-                            subtitle: Text(item['message']),
-                          ),
+                  ...people.map(
+                    (item) => ListTile(
+                      leading: CircleAvatar(
+                        backgroundImage: AssetImage(item['image']),
+                      ),
+                      title: Text(item['name']),
+                      subtitle: Text(item['message']),
+                    ),
+                  ),
+                  SizedBox(height: 20),
+
+                  if (groups.isNotEmpty)
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Text(
+                        'Group Chats',
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
                         ),
-                      ],
+                      ),
+                    ),
+                  SizedBox(height: 20),
+
+                  ...groups.map(
+                    (item) => ListTile(
+                      leading: CircleAvatar(
+                        backgroundImage: AssetImage(item['image']),
+                      ),
+                      title: Text(item['name']),
+                      subtitle: Text(item['message']),
                     ),
                   ),
                 ],
               ),
+            ),
+            Container(
+              height: 216,
+              width: 390,
+              child: Image.asset('assets/iOS keyboard.png', fit: BoxFit.cover),
             ),
           ],
         ),

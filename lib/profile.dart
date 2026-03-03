@@ -10,8 +10,33 @@ class Profile extends StatefulWidget {
 class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      
+    return Scaffold(
+      backgroundColor: Colors.teal,
+      appBar: AppBar(
+        backgroundColor: Colors.teal,
+        leading: Icon(Icons.arrow_back, color: Colors.white),
+        title: Center(
+          child: Padding(
+            padding: const EdgeInsets.only(right: 40),
+            child: Text(
+              'Settings',
+              style: TextStyle(
+                fontWeight: FontWeight.w500,
+                fontSize: 20,
+                color: Colors.white,
+              ),
+            ),
+          ),
+        ),
+      ),
+      body: SafeArea(child: Column(
+        children: [
+Container(
+  
+)
+        ],
+      )
+      ),
     );
   }
 }
