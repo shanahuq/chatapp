@@ -4,8 +4,10 @@ import 'package:flutter_application_6/contacts.dart';
 import 'package:flutter_application_6/creategroup.dart';
 import 'package:flutter_application_6/createpoll.dart';
 import 'package:flutter_application_6/groupcall.dart';
+import 'package:flutter_application_6/profile.dart';
 import 'package:flutter_application_6/search.dart';
 import 'package:flutter_application_6/startscreen.dart';
+import 'package:flutter_application_6/userprofile.dart';
 import 'bottomnavibar.dart';
 import 'contactsofgiftsending.dart';
 import 'home.dart';
@@ -46,7 +48,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const Bottomnavibar(),
+      home: const Userprofile(),
       // home: Contactsofgiftsending(),
     );
   }
