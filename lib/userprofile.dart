@@ -92,39 +92,120 @@ class _UserprofileState extends State<Userprofile> {
                     topRight: Radius.circular(30),
                   ),
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 20, top: 10),
-                  child: ListView.separated(
-                    itemBuilder: (context, index) {
-                      return ListTile(
-                        contentPadding: EdgeInsets.zero,
-                        title: Text(
-                          chat[index]['status'],
-                          style: TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 14,
-                            color: Color(0xff797C7B),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    /// User Info List
+                    ListView.separated(
+                      shrinkWrap: true,
+                      physics: NeverScrollableScrollPhysics(),
+                      itemCount: chat.length,
+                      itemBuilder: (context, index) {
+                        return ListTile(
+                          contentPadding: EdgeInsets.zero,
+                          title: Text(
+                            chat[index]['status'],
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Color(0xff797C7B),
+                            ),
                           ),
-                        ),
-                        subtitle: Text(
-                          chat[index]['name'],
-                          style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 16,
-                            color: Color(0xff000E08),
+                          subtitle: Text(
+                            chat[index]['name'],
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w500,
+                              color: Color(0xff000E08),
+                            ),
                           ),
-                        ),
-                        
-                      );
-                      
-                    },
-                    separatorBuilder: (context, index) => SizedBox(height: 15),
-                    itemCount: chat.length,
-                  ),
+                        );
+                      },
+                      separatorBuilder:
+                          (context, index) => SizedBox(height: 15),
+                    ),
+
+                    SizedBox(height: 15),
+
+                    /// Media Shared Header
+                    Padding(
+                      padding: const EdgeInsets.only(top: 20),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Media Shared",
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Color(0xff797C7B),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 20),
+                            child: Text(
+                              "View All",
+                              style: TextStyle(
+                                fontSize: 14,
+                                color: Colors.teal,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 20,left: 60),
+                      child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Container(
+                            height: 92,
+                            width: 92,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(12),
+                              image: DecorationImage(
+                                image: AssetImage('assets/Rectangle 1154.png'),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+
+                          SizedBox(width: 15),
+
+                          Container(
+                            height: 92,
+                            width: 92,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(12),
+                              image: DecorationImage(
+                                image: AssetImage('assets/Rectangle 1155.png'),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+
+                          SizedBox(width: 15),
+
+                          Padding(
+                            padding: const EdgeInsets.only(right: 60),
+                            child: Container(
+                              height: 92,
+                              width: 92,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(12),
+                                image: DecorationImage(
+                                  image: AssetImage('assets/Group 430.png'),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
-          
           ],
         ),
       ),

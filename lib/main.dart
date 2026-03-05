@@ -6,6 +6,8 @@ import 'package:flutter_application_6/createpoll.dart';
 import 'package:flutter_application_6/groupcall.dart';
 import 'package:flutter_application_6/profile.dart';
 import 'package:flutter_application_6/search.dart';
+import 'package:flutter_application_6/search1.dart';
+import 'package:flutter_application_6/searchscreen2.dart';
 import 'package:flutter_application_6/startscreen.dart';
 import 'package:flutter_application_6/userprofile.dart';
 import 'bottomnavibar.dart';
@@ -48,7 +50,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const Userprofile(),
+      home: const Searchscreen2(),
       // home: Contactsofgiftsending(),
     );
   }
