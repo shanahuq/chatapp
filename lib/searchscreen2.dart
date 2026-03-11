@@ -18,6 +18,7 @@ class _Searchscreen2State extends State<Searchscreen2>
       "user": "Roshan432",
       "avatar": "assets/Ellipse 1213.png",
       "likes": "3.4k",
+      "icon": Icons.play_arrow_rounded,
     },
     {
       "image": "assets/Rectangle 1170.png",
@@ -27,6 +28,7 @@ class _Searchscreen2State extends State<Searchscreen2>
       "user": "Roshan432",
       "avatar": "assets/Ellipse 1213.png",
       "likes": "3.4k",
+      "icon": Icons.play_arrow_rounded,
     },
     {
       "image": "assets/Rectangle 1169 (1).png",
@@ -36,6 +38,7 @@ class _Searchscreen2State extends State<Searchscreen2>
       "user": "Roshan432",
       "avatar": "assets/Ellipse 1213.png",
       "likes": "3.4k",
+      "icon": Icons.play_arrow_rounded,
     },
     {
       "image": "assets/Rectangle 1170 (1).png",
@@ -45,6 +48,7 @@ class _Searchscreen2State extends State<Searchscreen2>
       "user": "Roshan432",
       "avatar": "assets/Ellipse 1213.png",
       "likes": "3.4k",
+      "icon": Icons.play_arrow_rounded,
     },
     {
       'image': 'assets/Rectangle 1169 (2).png',
@@ -54,6 +58,7 @@ class _Searchscreen2State extends State<Searchscreen2>
       "user": "Roshan432",
       "avatar": "assets/Ellipse 1213.png",
       "likes": "3.4k",
+      "icon": Icons.play_arrow_rounded,
     },
     {
       'image': 'assets/Rectangle 1170 (2).png',
@@ -63,6 +68,147 @@ class _Searchscreen2State extends State<Searchscreen2>
       "user": "Roshan432",
       "avatar": "assets/Ellipse 1213.png",
       "likes": "3.4k",
+      "icon": Icons.play_arrow_rounded,
+    },
+  ];
+  final List<Map<String, dynamic>> message = [
+    {
+      'image': 'assets/Ellipse 1211 (1).png',
+      'name': 'boykaa.pubjii game',
+      'title': 'boykaa',
+      'status': '555532 followers . 234 videos',
+      'comment': 'follow',
+    },
+    {
+      'image': 'assets/Ellipse 1212 (1).png',
+      'name': 'boykaa.full movie',
+      'title': 'boykaa',
+      'status': '555532 followers . 234 videos',
+      'comment': 'follow',
+    },
+    {
+      'image': 'assets/Ellipse 1212 (2).png',
+      'name': 'boykaa.f2heeeee',
+      'title': 'boykaa',
+      'status': '555532 followers . 234 videos',
+      'comment': 'follow',
+    },
+    {
+      'image': 'assets/Ellipse 1212 (3).png',
+      'name': 'boykaa.ttttt4443',
+      'title': 'boykaa',
+      'status': '555532 followers . 234 videos',
+      'comment': 'follow',
+    },
+    {
+      'image': 'assets/Ellipse 1212 (4).png',
+      'name': 'boykaa55555555',
+      'title': 'boykaa',
+      'status': '3333532 followers . 234 videos',
+      'comment': 'follow',
+    },
+    {
+      'image': 'assets/Ellipse 1212 (5).png',
+      'name': 'boykaa.4444444',
+      'title': 'boykaa',
+      'status': '7777777 followers . 234 videos',
+      'comment': 'follow',
+    },
+    {
+      'image': 'assets/Ellipse 1212 (6).png',
+      'name': 'boykaa.full 3444',
+      'title': 'boykaa',
+      'status': '999992 followers . 234 videos',
+      'comment': 'follow',
+    },
+    {
+      'image': 'assets/Ellipse 1212 (7).png',
+      'name': 'boykaa.ddddddd',
+      'title': 'boykaa',
+      'status': '6666666 followers . 234 videos',
+      'comment': 'follow',
+    },
+    {
+      'image': 'assets/Ellipse 1212 (8).png',
+      'name': 'boykaa.4444555',
+      'title': 'boykaa',
+      'status': '3333332 followers . 234 videos',
+      'comment': 'follow',
+    },
+    {
+      'image': 'assets/Ellipse 1212 (9).png',
+      'name': 'boykaa.5588888',
+      'title': 'boykaa',
+      'status': '555532 followers . 234 videos',
+      'comment': 'follow',
+    },
+  ];
+  final List<Map<String, dynamic>> videos = [
+    {
+      'image': 'assets/Group 539.png',
+      'name': 'boykaa.pubjii game',
+      'title': 'boykaa',
+      'status': '01:00. 234k videos',
+    },
+    {
+      'image': 'assets/Group 538.png',
+      'name': 'boykaa.full movie',
+      'title': 'boykaa',
+      'status': '01:00. 234k videos',
+    },
+    {
+      'image': 'assets/Group 537.png',
+      'name': 'boykaa.f2heeeee',
+      'title': 'boykaa',
+      'status': '01:00. 234k videos',
+    },
+    {
+      'image': 'assets/Group 536.png',
+      'name': 'boykaa.ttttt4443',
+      'title': 'boykaa',
+      'status': '01:00. 2354k videos',
+    },
+    {
+      'image': 'assets/Group 535.png',
+      'name': 'boykaa55555555',
+      'title': 'boykaa',
+      'status': '02:00. 2634k videos',
+    },
+    {
+      'image': 'assets/Group 534.png',
+      'name': 'boykaa.4444444',
+      'title': 'boykaa',
+      'status': '03:00. 2334k videos',
+    },
+    {
+      'image': 'assets/Group 533.png',
+      'name': 'boykaa.full 3444',
+      'title': 'boykaa',
+      'status': '03:00. 2334k videos',
+    },
+    {
+      'image': 'assets/Group 534.png',
+      'name': 'boykaa.ddddddd',
+      'title': 'boykaa',
+      'status': '01:00. 2334k videos',
+    },
+    {
+      'image': 'assets/Group 531.png',
+      'name': 'boykaa.4444555',
+      'title': 'boykaa',
+      'status': '04:00. 2334k videos',
+    },
+    {
+      'image': 'assets/Group 539.png',
+      'name': 'boykaa.5588888',
+      'title': 'boykaa',
+      'status': '03:00. 23354k videos',
+    },
+    {
+      'image': 'assets/Group 534.png',
+      'name': 'Boykaa4444444',
+      'title': 'boykaa',
+      'status': '02:00. 23234k videos',
     },
   ];
   late TabController _tabController;
@@ -297,6 +443,132 @@ class _Searchscreen2State extends State<Searchscreen2>
     );
   }
 
+  Widget _UsersTabContent() {
+    return ListView.separated(
+      itemCount: message.length,
+      separatorBuilder: (context, index) => const SizedBox(height: 10),
+      itemBuilder: (context, index) {
+        final user = message[index];
+        return Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10),
+          child: Row(
+            children: [
+              // User info (image + text)
+              Expanded(
+                child: ListTile(
+                  contentPadding: EdgeInsets.zero,
+                  leading: CircleAvatar(
+                    radius: 25,
+                    backgroundImage: AssetImage(user['image']),
+                  ),
+                  title: Text(
+                    user['name'],
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 15,
+                      color: Colors.white,
+                    ),
+                  ),
+                  subtitle: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        user['title'],
+                        style: const TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 10,
+                          color: Colors.white,
+                        ),
+                      ),
+                      Text(
+                        user['status'],
+                        style: const TextStyle(
+                          fontWeight: FontWeight.w400,
+                          fontSize: 10,
+                          color: Colors.white70,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              // Follow button
+              Container(
+                height: 25,
+                width: 80,
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  color: const Color(0xffEF1F1F), // bright red
+                  borderRadius: BorderRadius.circular(4),
+                ),
+                child: Text(
+                  user['commenr'] ?? 'follow', // use your key or fallback
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 12,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
+  Widget _SoundsTabContent() {
+    return ListView.separated(
+      itemBuilder: (context, index) {
+        return Padding(
+          padding: const EdgeInsets.only(top: 10),
+          child: ListTile(
+            leading: Container(
+              height: 48,
+              width: 50,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Image.asset(videos[index]['image']),
+            ),
+            title: Text(
+              videos[index]['name'],
+              style: TextStyle(
+                fontWeight: FontWeight.w500,
+                fontSize: 15,
+                color: Colors.white,
+              ),
+            ),
+            subtitle: Column(crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  videos[index]['title'],
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 10,
+                    color: Colors.white,
+                  ),
+                ),
+                Text(
+                  videos[index]['status'],
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 12,
+                    color: Colors.white,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+      separatorBuilder: (context, index) {
+        return SizedBox(height: 10);
+      },
+      itemCount: videos.length,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -324,6 +596,10 @@ class _Searchscreen2State extends State<Searchscreen2>
                         return _topTabContent(); // Show your content in Top
                       else if (tab == 'Videos')
                         return _videosTabContent();
+                      else if (tab == 'Users')
+                        return _UsersTabContent();
+                      else if (tab == 'Sounds')
+                        return _SoundsTabContent();
                       return Center(
                         child: Text(
                           'Content for $tab',
@@ -343,131 +619,176 @@ class _Searchscreen2State extends State<Searchscreen2>
   }
 
   Widget card(int index) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Stack(
-          alignment: Alignment.center,
-          children: [
+    double imageHeight = index == 3 ? 200 : 300;
+    return Padding(
+      padding: EdgeInsets.only(top: index == 3 ? 0 : 0),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          if (index == 3)
             Container(
-              height: 300,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                image: DecorationImage(
-                  image: AssetImage(chat[index]['image']),
-                  fit: BoxFit.cover,
+              height: 100,
+              child: Container(
+                width: 120,
+                height: 80,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(6),
                 ),
-              ),
-            ),
-            Positioned(
-              bottom: 5,
-              left: 5,
-              child: Text(
-                chat[index]['date'],
-                style: TextStyle(
-                  fontWeight: FontWeight.w500,
-                  fontSize: 9,
-                  color: Colors.white,
-                ),
-              ),
-            ),
-            // Positioned(
-            //   top: 0,
-            //   left: 20,
-            //   child: Text(
-            //     chat[index]['tag1'],
-            //     style: TextStyle(
-            //       fontWeight: FontWeight.w500,
-            //       fontSize: 9,
-            //       color: Colors.white,
-            //     ),
-            //   ),
-            // ),
-            // Positioned(
-            //   top: 10,
-            //   left: 20,
-            //   child: Text(
-            //     chat[index]['tag2'],
-            //     style: TextStyle(
-            //       fontWeight: FontWeight.w500,
-            //       fontSize: 9,
-            //       color: Colors.white,
-            //     ),
-            //   ),
-            // ),
-            // Positioned(
-            //   top: 20,
-            //   left: 20,
-            //   child: CircleAvatar(
-            //     radius: 10,
-            //     child: Image.asset(chat[index]['avatar']),
-            //   ),
-            // ),
-          ],
-        ),
 
-        Padding(
-          padding: const EdgeInsets.only(top: 20, left: 30),
-          child: Text(
-            chat[index]['tag1'],
-            style: TextStyle(
-              fontWeight: FontWeight.w500,
-              fontSize: 9,
-              color: Colors.white,
-            ),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(left: 30),
-          child: Text(
-            chat[index]['tag2'],
-            style: TextStyle(
-              fontWeight: FontWeight.w500,
-              fontSize: 9,
-              color: Colors.white,
-            ),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(top: 10, left: 30),
-          child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              CircleAvatar(
-                radius: 10,
-                child: Image.asset(chat[index]['avatar']),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(right: 80),
-                child: Text(
-                  chat[index]['user'],
-                  style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                    fontSize: 6,
-                    color: Color(0xffA59F9F),
-                  ),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(right: 30),
-                child: Row(
+                child: Stack(
                   children: [
-                    Icon(Icons.favorite_border, color: Colors.black, size: 18),
-                    Text(
-                      chat[index]['likes'],
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 6,
-                        color: Color(0xffB2B0B0),
+                    Image.asset('assets/Rectangle 1172.png'),
+                    Positioned(
+                      top: 5,
+                      left: 5,
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(top: 10),
+                            child: CircleAvatar(
+                              radius: 10,
+                              child: Image.asset('assets/Ellipse 1213.png'),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "REply to id 3421",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 6,
+                                    color: Color(0xffA7A5A5),
+                                  ),
+                                ),
+                                Text(
+                                  "MY favrote boykaas",
+                                  style: TextStyle(
+                                    fontSize: 9,
+                                    fontWeight: FontWeight.w700,
+                                    color: Color(0xff000000),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],
                 ),
               ),
+            ),
+          Stack(
+            alignment: Alignment.center,
+            children: [
+              Container(
+                height: imageHeight,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  image: DecorationImage(
+                    image: AssetImage(chat[index]['image']),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 50),
+                  child: Icon(
+                    chat[index]['icon'],
+                    color: Colors.white,
+                    size: 80,
+                  ),
+                ),
+              ),
+              Positioned(
+                bottom: 5,
+                left: 5,
+                child: Text(
+                  chat[index]['date'],
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 9,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
             ],
           ),
-        ),
-      ],
+
+          Padding(
+            padding: const EdgeInsets.only(top: 20, left: 30),
+            child: Text(
+              chat[index]['tag1'],
+              style: TextStyle(
+                fontWeight: FontWeight.w500,
+                fontSize: 9,
+                color: Colors.white,
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 30),
+            child: Text(
+              chat[index]['tag2'],
+              style: TextStyle(
+                fontWeight: FontWeight.w500,
+                fontSize: 9,
+                color: Colors.white,
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 10, left: 30),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                CircleAvatar(
+                  radius: 10,
+                  child: Image.asset(chat[index]['avatar']),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 80),
+                  child: Text(
+                    chat[index]['user'],
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 6,
+                      color: Color(0xffA59F9F),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 30),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.favorite_border,
+                        color: Colors.black,
+                        size: 18,
+                      ),
+                      Text(
+                        chat[index]['likes'],
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 6,
+                          color: Color(0xffB2B0B0),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
