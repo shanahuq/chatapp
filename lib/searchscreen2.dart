@@ -149,67 +149,166 @@ class _Searchscreen2State extends State<Searchscreen2>
       'name': 'boykaa.pubjii game',
       'title': 'boykaa',
       'status': '01:00. 234k videos',
+      'icon': Icons.video_camera_back,
     },
     {
       'image': 'assets/Group 538.png',
       'name': 'boykaa.full movie',
       'title': 'boykaa',
       'status': '01:00. 234k videos',
+      'icon': Icons.video_camera_back,
     },
     {
       'image': 'assets/Group 537.png',
       'name': 'boykaa.f2heeeee',
       'title': 'boykaa',
       'status': '01:00. 234k videos',
+      'icon': Icons.video_camera_back,
     },
     {
       'image': 'assets/Group 536.png',
       'name': 'boykaa.ttttt4443',
       'title': 'boykaa',
       'status': '01:00. 2354k videos',
+      'icon': Icons.video_camera_back,
     },
     {
       'image': 'assets/Group 535.png',
       'name': 'boykaa55555555',
       'title': 'boykaa',
       'status': '02:00. 2634k videos',
+      'icon': Icons.video_camera_back,
     },
     {
       'image': 'assets/Group 534.png',
       'name': 'boykaa.4444444',
       'title': 'boykaa',
       'status': '03:00. 2334k videos',
+      'icon': Icons.video_camera_back,
     },
     {
       'image': 'assets/Group 533.png',
       'name': 'boykaa.full 3444',
       'title': 'boykaa',
       'status': '03:00. 2334k videos',
+      'icon': Icons.video_camera_back,
     },
     {
       'image': 'assets/Group 534.png',
       'name': 'boykaa.ddddddd',
       'title': 'boykaa',
       'status': '01:00. 2334k videos',
+      'icon': Icons.video_camera_back,
     },
     {
       'image': 'assets/Group 531.png',
       'name': 'boykaa.4444555',
       'title': 'boykaa',
       'status': '04:00. 2334k videos',
+      'icon': Icons.video_camera_back,
     },
     {
       'image': 'assets/Group 539.png',
       'name': 'boykaa.5588888',
       'title': 'boykaa',
       'status': '03:00. 23354k videos',
+      'icon': Icons.video_camera_back,
     },
     {
       'image': 'assets/Group 534.png',
       'name': 'Boykaa4444444',
       'title': 'boykaa',
       'status': '02:00. 23234k videos',
+      'icon': Icons.video_camera_back,
     },
+  ];
+  final List<Map<String, dynamic>> location = [
+    {
+      'icon': Icons.location_on,
+      'name': 'Boykataa',
+      'title': 'boykaa',
+      'status': '01:00. 234k videos',
+    },
+    {
+      'icon': Icons.location_on,
+      'name': 'boykaa.metal',
+      'title': 'boykaa',
+      'status': '01:00. 234k videos',
+    },
+    {
+      'icon': Icons.location_on,
+      'name': 'boykaa.f2heeeee',
+      'title': 'boykaa',
+      'status': '01:00. 234k videos',
+    },
+    {
+      'icon': Icons.location_on,
+      'name': 'boykaa.ttttt4443',
+      'title': 'boykaa',
+      'status': '01:00. 2354k videos',
+    },
+    {
+      'icon': Icons.location_on,
+      'name': 'boykaa55555555',
+      'title': 'boykaa',
+      'status': '02:00. 2634k videos',
+    },
+    {
+      'icon': Icons.location_on,
+      'name': 'boykaa.4444444',
+      'title': 'boykaa',
+      'status': '03:00. 2334k videos',
+    },
+    {
+      'icon': Icons.location_on,
+      'name': 'boykaa.full 3444',
+      'title': 'boykaa',
+      'status': '03:00. 2334k videos',
+    },
+    {
+      'icon': Icons.location_on,
+      'name': 'boykaa.ddddddd',
+      'title': 'boykaa',
+      'status': '01:00. 2334k videos',
+    },
+    {
+      'icon': Icons.location_on,
+      'name': 'boykaa.4444555',
+      'title': 'boykaa',
+      'status': '04:00. 2334k videos',
+    },
+    {
+      'icon': Icons.location_on,
+      'name': 'boykaa.5588888',
+      'title': 'boykaa',
+      'status': '03:00. 23354k videos',
+    },
+    {
+      'icon': Icons.location_on,
+      'name': 'Boykaa4444444',
+      'title': 'boykaa',
+      'status': '02:00. 23234k videos',
+    },
+  ];
+  final List<Map<String, dynamic>> hash = [
+    {"name": '#       boykaafilm', 'status': '2345 views'},
+    {'name': '#       boyka full farm', 'status': '22225 views'},
+    {'name': '#       boyka44afilm', 'status': '12233 views'},
+    {'name': '#       boykaaf44m', 'status': '12233 views'},
+    {'name': '#       full movie', 'status': '12233 views'},
+    {'name': '#       boykaafilm', 'status': '12233 views'},
+    {'name': '#       boykaafilm', 'status': '12233 views'},
+    {'name': '#       boykaafilm', 'status': '12233 views'},
+    {'name': '#       boykaafilm', 'status': '12233 views'},
+    {'name': '#       boykaafilm', 'status': '12233 views'},
+    {'name': '#       boykaafilm', 'status': '12233 views'},
+    {'name': '#       boykaafilm', 'status': '12233 views'},
+    {'name': '#       boykaafilm', 'status': '12233 views'},
+    {'name': '#       boykaafilm', 'status': '12233 views'},
+    {'name': '#       boykaafilm', 'status': '12233 views'},
+    {'name': '#       boykaafilm', 'status': '12233 views'},
+    {'name': '#       boykaafilm', 'status': '12233 views'},
+    {'name': '#       boykaafilm', 'status': '12233 views'},
   ];
   late TabController _tabController;
 
@@ -522,43 +621,65 @@ class _Searchscreen2State extends State<Searchscreen2>
       itemBuilder: (context, index) {
         return Padding(
           padding: const EdgeInsets.only(top: 10),
-          child: ListTile(
-            leading: Container(
-              height: 48,
-              width: 50,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Image.asset(videos[index]['image']),
-            ),
-            title: Text(
-              videos[index]['name'],
-              style: TextStyle(
-                fontWeight: FontWeight.w500,
-                fontSize: 15,
-                color: Colors.white,
-              ),
-            ),
-            subtitle: Column(crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  videos[index]['title'],
-                  style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                    fontSize: 10,
-                    color: Colors.white,
+          child: Row(
+            children: [
+              Expanded(
+                child: ListTile(
+                  leading: Container(
+                    height: 48,
+                    width: 50,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Image.asset(videos[index]['image']),
+                  ),
+                  title: Text(
+                    videos[index]['name'],
+                    style: TextStyle(
+                      fontWeight: FontWeight.w500,
+                      fontSize: 15,
+                      color: Colors.white,
+                    ),
+                  ),
+                  subtitle: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        videos[index]['title'],
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 10,
+                          color: Colors.white,
+                        ),
+                      ),
+                      Text(
+                        videos[index]['status'],
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 12,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
-                Text(
-                  videos[index]['status'],
-                  style: TextStyle(
-                    fontWeight: FontWeight.w500,
-                    fontSize: 12,
-                    color: Colors.white,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 20),
+                child: Container(
+                  height: 25,
+                  width: 66,
+                  color: Colors.red,
+                  child: Center(
+                    child: Icon(
+                      videos[index]['icon'],
+                      color: Colors.white,
+                      size: 20,
+                    ),
                   ),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         );
       },
@@ -566,6 +687,86 @@ class _Searchscreen2State extends State<Searchscreen2>
         return SizedBox(height: 10);
       },
       itemCount: videos.length,
+    );
+  }
+
+  Widget _PlacesTabContent() {
+    return ListView.separated(
+      itemBuilder: (context, index) {
+        return ListTile(
+          leading: Icon(location[index]['icon'], color: Colors.white, size: 30),
+          title: Text(
+            location[index]['name'],
+            style: TextStyle(
+              fontWeight: FontWeight.w500,
+              fontSize: 15,
+              color: Colors.white,
+            ),
+          ),
+          subtitle: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                location[index]['title'],
+                style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 10,
+                  color: Colors.white,
+                ),
+              ),
+              Text(
+                location[index]['status'],
+                style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 12,
+                  color: Colors.white,
+                ),
+              ),
+            ],
+          ),
+        );
+      },
+      separatorBuilder: (context, index) {
+        return SizedBox(height: 10);
+      },
+      itemCount: location.length,
+    );
+  }
+
+  Widget _HashtagsTabContent() {
+    return ListView.separated(
+      itemBuilder: (context, index) {
+        return Padding(
+          padding: const EdgeInsets.only(top: 20, left: 20),
+          child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                hash[index]['name'],
+                style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 15,
+                  color: Colors.white,
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 30),
+                child: Text(
+                  hash[index]['status'],
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 12,
+                    color: Color(0xffCEC8C8),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        );
+      },
+      separatorBuilder: (context, index) {
+        return SizedBox(height: 10);
+      },
+      itemCount: hash.length,
     );
   }
 
@@ -600,6 +801,10 @@ class _Searchscreen2State extends State<Searchscreen2>
                         return _UsersTabContent();
                       else if (tab == 'Sounds')
                         return _SoundsTabContent();
+                      else if (tab == 'Places')
+                        return _PlacesTabContent();
+                      else if (tab == 'Hashtags')
+                        return _HashtagsTabContent();
                       return Center(
                         child: Text(
                           'Content for $tab',
