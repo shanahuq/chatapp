@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_6/search1.dart';
+import 'package:flutter_application_6/searchscreen2.dart';
 
 class Following extends StatefulWidget {
   const Following({super.key});
@@ -59,10 +60,10 @@ class _FollowingState extends State<Following> {
                     padding: const EdgeInsets.only(right: 65),
                     child: GestureDetector(
                       onTap: () {
-                        Search1;
+                        Searchscreen2;
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Search1()),
+                          MaterialPageRoute(builder: (context) => Searchscreen2()),
                         );
                       },
                       child: Icon(Icons.search, color: Colors.white, size: 36),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_6/userprofile.dart';
 
 class Profile extends StatefulWidget {
   const Profile({super.key});
@@ -125,21 +126,34 @@ class _ProfileState extends State<Profile> {
                     Expanded(
                       child: ListView.separated(
                         itemBuilder: (context, index) {
-                          return ListTile(
-                            leading: CircleAvatar(
-                              radius: 20,
-                              child: Image.asset(chat[index]['image']),
-                            ),
-                            title: Text(
-                              chat[index]['name'],
-                              style: TextStyle(
-                                fontWeight: FontWeight.w600,
-                                fontSize: 16,
-                                color: Color(0xff000E08),
+                          return GestureDetector(
+                            onTap: () {
+                              if (index == 0) {
+                                Userprofile;
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => Userprofile(),
+                                  ),
+                                );
+                              }
+                            },
+                            child: ListTile(
+                              leading: CircleAvatar(
+                                radius: 20,
+                                child: Image.asset(chat[index]['image']),
                               ),
-                            ),
-                            subtitle: Row(
-                              children: [Text(chat[index]['status'])],
+                              title: Text(
+                                chat[index]['name'],
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 16,
+                                  color: Color(0xff000E08),
+                                ),
+                              ),
+                              subtitle: Row(
+                                children: [Text(chat[index]['status'])],
+                              ),
                             ),
                           );
                         },

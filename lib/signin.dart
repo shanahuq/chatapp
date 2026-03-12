@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_application_6/signin1.dart';
 
 class Signin extends StatefulWidget {
   const Signin({super.key});
@@ -14,7 +15,9 @@ class _SigninState extends State<Signin> {
     return Scaffold(
       backgroundColor: (Colors.teal),
       appBar: AppBar(
-        leading: Icon(Icons.arrow_back, color: Colors.white),
+        leading: GestureDetector(
+          onTap: () => Navigator.pop(context),
+          child: Icon(Icons.arrow_back, color: Colors.white)),
         backgroundColor: Colors.teal,
       ),
       body: Column(
@@ -37,10 +40,10 @@ class _SigninState extends State<Signin> {
           Padding(
             padding: const EdgeInsets.only(top: 16, left: 41, right: 41),
             child: Text(
-              'Welcome back! sign in  using  your social account or  email to  continue us',
+              'Welcome back! Sign in using your social \n account or email to continue us',
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: Colors.white60,
+                color: Color(0xffAEB1B0),
                 fontSize: 14,
                 fontWeight: FontWeight.w400,
                 fontStyle: FontStyle.normal,
@@ -106,7 +109,7 @@ class _SigninState extends State<Signin> {
                 SizedBox(width: 190, child: Divider(color: Colors.white60)),
                 Padding(
                   padding: const EdgeInsets.only(left: 15, right: 15),
-                  child: Text('OR', style: TextStyle(color: Colors.white60)),
+                  child: Text('OR', style: TextStyle(color: Color(0xffB4B6B5))),
                 ),
                 SizedBox(width: 190, child: Divider(color: Colors.white60)),
               ],
@@ -120,7 +123,7 @@ class _SigninState extends State<Signin> {
                 Text(
                   'Your Email',
                   style: TextStyle(
-                    color: Colors.white60,
+                    color: Color(0xffB4B6B5),
                     fontWeight: FontWeight.w500,
                     fontSize: 14,
                   ),
@@ -147,7 +150,7 @@ class _SigninState extends State<Signin> {
                 child: Text(
                   'Password',
                   style: TextStyle(
-                    color: Colors.white60,
+                    color: Color(0xffB4B6B5),
                     fontWeight: FontWeight.w500,
                     fontSize: 14,
                   ),
@@ -171,15 +174,24 @@ class _SigninState extends State<Signin> {
               Padding(
                 padding: const EdgeInsets.only(top: 177, left: 90, bottom: 16),
                 child: Center(
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(16),
-                      color: Colors.white,
-                    ),
-                    child: Center(child: Text('Log in')),
+                  child: GestureDetector(
+                    onTap: () {
+                      Signin1;
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Signin1()),
+                      );
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(16),
+                        color: Colors.white,
+                      ),
+                      child: Center(child: Text('Log in')),
 
-                    height: 48,
-                    width: 328,
+                      height: 48,
+                      width: 328,
+                    ),
                   ),
                 ),
               ),

@@ -12,7 +12,9 @@ class _Signup1State extends State<Signup1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(leading: Icon(Icons.arrow_back)),
+      appBar: AppBar(leading: GestureDetector(
+        onTap: () => Navigator.pop(context),
+        child: Icon(Icons.arrow_back))),
       body: Column(
         children: [
           Padding(
@@ -27,9 +29,13 @@ class _Signup1State extends State<Signup1> {
           Padding(
             padding: const EdgeInsets.only(top: 17, left: 31),
             child: Text(
-              'Get  chatting  with  friends  and  family  today  by  signing  up  for  our  chat  app !',
+              'Get chatting with friends and family today by \n  signing up for our chat app! !',
               textAlign: TextAlign.center,
-              style: TextStyle(fontWeight: FontWeight.w400, fontSize: 14),
+              style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 14,
+                color: Color(0xff797C7B),
+              ),
             ),
           ),
           Row(
@@ -183,19 +189,32 @@ class _Signup1State extends State<Signup1> {
               ),
             ],
           ),
-          Row(mainAxisAlignment: MainAxisAlignment.center,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
                 padding: const EdgeInsets.only(top: 114),
                 child: Container(
-                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(16),color: Colors.teal),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(16),
+                    color: Colors.teal,
+                  ),
                   child: Center(
-                    child: GestureDetector( onTap: () {
-                      Home1;Navigator.push(context,MaterialPageRoute(builder: (context)=>Home1()));
-                    },
+                    child: GestureDetector(
+                      onTap: () {
+                        Home1;
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Home1()),
+                        );
+                      },
                       child: Text(
                         'Create an account',
-                        style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16,color: Colors.white),
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 16,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                   ),

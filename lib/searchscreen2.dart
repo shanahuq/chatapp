@@ -738,7 +738,8 @@ class _Searchscreen2State extends State<Searchscreen2>
       itemBuilder: (context, index) {
         return Padding(
           padding: const EdgeInsets.only(top: 20, left: 20),
-          child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
                 hash[index]['name'],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_6/signup.dart';
 
 class Signin1 extends StatefulWidget {
   const Signin1({super.key});
@@ -13,7 +14,10 @@ class _Signin1State extends State<Signin1> {
     return Scaffold(
       backgroundColor: Colors.teal,
       appBar: AppBar(
-        leading: Icon(Icons.arrow_back, color: Colors.white),
+        leading: GestureDetector(
+          onTap: () => Navigator.pop(context),
+          child: Icon(Icons.arrow_back, color: Colors.white),
+        ),
         backgroundColor: Colors.teal,
       ),
       body: Column(
@@ -32,7 +36,7 @@ class _Signin1State extends State<Signin1> {
           Padding(
             padding: const EdgeInsets.only(top: 16, left: 41, right: 41),
             child: Text(
-              'Welcome  back!  sign  in  using  your  social  account  or  email  to  continue  us',
+              'Welcome back! Sign in using your social \n account or email to continue us',
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.white60,
@@ -41,55 +45,58 @@ class _Signin1State extends State<Signin1> {
               ),
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 25, left: 50, right: 20),
-                child: Container(
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    border: Border.all(color: Colors.white),
+          Padding(
+            padding: const EdgeInsets.only(right: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 25, left: 50, right: 20),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(color: Colors.white),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Image.asset('assets/Group 439.png'),
+                    ),
+                    height: 48,
+                    width: 48,
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Image.asset('assets/Group 439.png'),
-                  ),
-                  height: 48,
-                  width: 48,
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 25, right: 20),
-                child: Container(
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    border: Border.all(color: Colors.white),
+                Padding(
+                  padding: const EdgeInsets.only(top: 25, right: 20),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(color: Colors.white),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Image.asset('assets/Group 438.png'),
+                    ),
+                    height: 48,
+                    width: 48,
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Image.asset('assets/Group 438.png'),
-                  ),
-                  height: 48,
-                  width: 48,
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 25),
-                child: Container(
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    border: Border.all(color: Colors.white),
+                Padding(
+                  padding: const EdgeInsets.only(top: 25),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(color: Colors.white),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child: Image.asset('assets/Vector.png'),
+                    ),
+                    height: 48,
+                    width: 48,
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.0),
-                    child: Image.asset('assets/Vector.png'),
-                  ),
-                  height: 48,
-                  width: 48,
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
           Padding(
             padding: const EdgeInsets.only(top: 37),
@@ -201,23 +208,32 @@ class _Signin1State extends State<Signin1> {
             children: [
               Padding(
                 padding: const EdgeInsets.only(top: 168, left: 26),
-                child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(16),
-                    color: Colors.white,
-                  ),
-                  child: Center(
-                    child: Text(
-                      'Log in',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 16,
+                child: GestureDetector(
+                  onTap: () {
+                    Signup;
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Signup()),
+                    );
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                      color: Colors.white,
+                    ),
+                    child: Center(
+                      child: Text(
+                        'Log in',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 16,
+                        ),
                       ),
                     ),
-                  ),
 
-                  height: 42,
-                  width: 322,
+                    height: 42,
+                    width: 322,
+                  ),
                 ),
               ),
             ],

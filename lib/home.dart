@@ -11,16 +11,29 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       backgroundColor: Colors.teal,
-      body: Column(mainAxisAlignment: MainAxisAlignment.center,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-       Center(child: GestureDetector(
-        onTap: () {
-          Onboarding;
-          Navigator.push(context, MaterialPageRoute(builder: (context) => Onboarding(),));
-        },
-        child: Container(child: Image.asset('assets/JPEG4-removebg-preview 1.png',height: 257,width: 321,),))) 
+          Center(
+            child: GestureDetector(
+              onTap: () {
+                Onboarding;
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Onboarding()),
+                );
+              },
+              child: Container(
+                child: Image.asset(
+                  'assets/JPEG4-removebg-preview 1.png',
+                  height: 257,
+                  width: 321,
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );

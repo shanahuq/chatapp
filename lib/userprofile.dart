@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_6/following.dart';
 
 class Userprofile extends StatefulWidget {
   const Userprofile({super.key});
@@ -24,7 +25,12 @@ class _UserprofileState extends State<Userprofile> {
             Padding(
               padding: const EdgeInsets.only(top: 40, left: 30),
               child: Row(
-                children: [Icon(Icons.arrow_back, color: Colors.white)],
+                children: [
+                  GestureDetector(
+                    onTap: () => Navigator.pop(context),
+                    child: Icon(Icons.arrow_back, color: Colors.white),
+                  ),
+                ],
               ),
             ),
             Padding(
@@ -141,12 +147,23 @@ class _UserprofileState extends State<Userprofile> {
                           ),
                           Padding(
                             padding: const EdgeInsets.only(right: 20),
-                            child: Text(
-                              "View All",
-                              style: TextStyle(
-                                fontSize: 14,
-                                color: Colors.teal,
-                                fontWeight: FontWeight.w500,
+                            child: GestureDetector(
+                              onTap: () {
+                                Following;
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => Following(),
+                                  ),
+                                );
+                              },
+                              child: Text(
+                                "View All",
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: Colors.teal,
+                                  fontWeight: FontWeight.w500,
+                                ),
                               ),
                             ),
                           ),
@@ -154,8 +171,9 @@ class _UserprofileState extends State<Userprofile> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 20,left: 60),
-                      child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      padding: const EdgeInsets.only(top: 20, left: 60),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Container(
                             height: 92,

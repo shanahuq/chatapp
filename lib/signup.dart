@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_6/signup1.dart';
 
 class Signup extends StatefulWidget {
   const Signup({super.key});
@@ -13,7 +14,9 @@ class _SignupState extends State<Signup> {
     return Scaffold(
       backgroundColor: Colors.teal,
       appBar: AppBar(
-        leading: Icon(Icons.arrow_back, color: Colors.white),
+        leading: GestureDetector(
+          onTap: () => Navigator.pop(context),
+          child: Icon(Icons.arrow_back, color: Colors.white)),
         backgroundColor: Colors.teal,
       ),
       body: Column(
@@ -34,7 +37,7 @@ class _SignupState extends State<Signup> {
           Padding(
             padding: const EdgeInsets.only(top: 17, left: 31, right: 31),
             child: Text(
-              'Get  chatting  with  friends  and  family  today  by  signing  up  for  our  chat  app',
+              'Get chatting with friends and family today by \n signing up for our chat app!',
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: Colors.white60,
@@ -66,7 +69,7 @@ class _SignupState extends State<Signup> {
                 width: 440,
                 child: Padding(
                   padding: const EdgeInsets.only(top: 44, left: 24),
-                  child: Divider(color: Colors.white),
+                  child: Divider(color: Color(0xffCDD1D0)),
                 ),
               ),
             ],
@@ -94,7 +97,7 @@ class _SignupState extends State<Signup> {
                 width: 440,
                 child: Padding(
                   padding: const EdgeInsets.only(top: 44, left: 24),
-                  child: Divider(color: Colors.white),
+                  child: Divider(color: Color(0xffCDD1D0)),
                 ),
               ),
             ],
@@ -122,7 +125,7 @@ class _SignupState extends State<Signup> {
                 width: 440,
                 child: Padding(
                   padding: const EdgeInsets.only(top: 44, left: 24),
-                  child: Divider(color: Colors.white),
+                  child: Divider(color: Color(0xffCDD1D0)),
                 ),
               ),
             ],
@@ -150,25 +153,41 @@ class _SignupState extends State<Signup> {
                 width: 440,
                 child: Padding(
                   padding: const EdgeInsets.only(top: 44, left: 24),
-                  child: Divider(color: Colors.white),
+                  child: Divider(color: Color(0xffCDD1D0)),
                 ),
               ),
             ],
           ),
-          Row(mainAxisAlignment: MainAxisAlignment.center,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
-                padding: const EdgeInsets.only(top: 132,left: 26),
-                child: Container(
-                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(16),color: Colors.white),
-                  child: Center(
-                    child: Text(
-                      'Create an Account',
-                      style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
+                padding: const EdgeInsets.only(top: 132, left: 26),
+                child: GestureDetector(
+                  onTap: () {
+                    Signup1;
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Signup1()),
+                    );
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                      color: Colors.white,
                     ),
+                    child: Center(
+                      child: Text(
+                        'Create an Account',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: 16,
+                        ),
+                      ),
+                    ),
+                    height: 42,
+                    width: 322,
                   ),
-                  height: 42,
-                  width: 322,
                 ),
               ),
             ],

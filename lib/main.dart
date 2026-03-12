@@ -50,7 +50,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const Searchscreen2(),
+      home: const Home(),
       // home: Contactsofgiftsending(),
     );
   }
